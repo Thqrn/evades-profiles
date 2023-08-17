@@ -1,6 +1,7 @@
 import requests
 import time
 import json
+import io
 
 # urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 # verify=False on the requests for proxies
@@ -10,9 +11,10 @@ URL = "evades.io"
 # URL = "192.99.150.59.nip.io" # proxy
 
 # open file and read the content in a list
-with open("username.txt",errors='ignore') as f:
-    usernames = f.readlines()
-    usernames = [*set(usernames)]
+f = io.open("username.txt", mode="r", encoding="utf-8")
+usernames = f.readlines()
+usernames = [*set(usernames)]
+f.close()
 
 # check that site is accessible
 try:
@@ -27,7 +29,11 @@ session = requests.Session()
 # loop through usernames
 start = time.perf_counter()
 
+with open("profiles.json", "w") as f:
+    pass
+
 profiles = open("profiles.json", "a")
+profiles.write("[")
 
 for i, username in enumerate(usernames):
     while True:
@@ -39,6 +45,7 @@ for i, username in enumerate(usernames):
 
         # username does not exist
         if status == 404:
+            print(f"[{i+1}/{len(usernames)}] {username.strip()} does not exist")
             pass
 
         # rate limited
@@ -49,12 +56,13 @@ for i, username in enumerate(usernames):
 
         # username is taken
         else:
+            if i != 0:
+                profiles.write(",\n")
             data = json.loads(code.text)
             data_final = {
                 username.strip(): data
             }
             json.dump(data_final, profiles)
-            profiles.write("\n")
             print(f"[{i+1}/{len(usernames)}] {username.strip()}")
             # achievements = len(data["stats"]["achievements"])
             # print(f"[{i+1}/{len(usernames)}] {username.strip()}: {achievements} achievements")
@@ -66,7 +74,7 @@ for i, username in enumerate(usernames):
         break
 
 session.close()
-
+profiles.write("]")
 profiles.close()
 
 print()
