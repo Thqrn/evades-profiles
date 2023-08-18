@@ -56,20 +56,25 @@ for i, username in enumerate(usernames):
 
         # username is taken
         else:
-            if i != 0:
-                profiles.write(",\n")
             data = json.loads(code.text)
             data_final = {
                 username.strip(): data
             }
+            if data_final == {
+                "": "You are not logged in."
+            }:
+                print(f"[{i+1}/{len(usernames)}] {username.strip()} USERNAME ERROR!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+                break
+            if i != 0:
+                profiles.write(",\n")
             json.dump(data_final, profiles)
-            print(f"[{i+1}/{len(usernames)}] {username.strip()}")
-            # achievements = len(data["stats"]["achievements"])
-            # print(f"[{i+1}/{len(usernames)}] {username.strip()}: {achievements} achievements")
-            # userinfo = user()
-            # userinfo.name = username.strip()
-            # userinfo.achievements = achievements
-            # userlist.append(userinfo)
+            current = time.perf_counter()-start
+            timepername = current/(i+1)
+            eta = timepername * (len(usernames)-(i+1))
+            etastring = str(round(eta//60)) + "m " + str(round(eta%60)) + "s"
+            elapsed = str(round(current//60)) + "m " + str(round(current%60)) + "s"
+            spacing = 60-len('[' + str(i+1) + '/' + str(len(usernames)) + '] ' + username.strip())
+            print(f"[{i+1}/{len(usernames)}] {username.strip()} {etastring + ' remaining':>{spacing}} {elapsed+' seconds elapsed':>40}")
 
         break
 

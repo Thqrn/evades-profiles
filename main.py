@@ -1,9 +1,119 @@
 import time
 import json
+import operator
+
+def maxlength(tab):
+
+    newtab = []
+
+    for col in tab:
+        newcol = []
+        for r in col:
+            if type(r) != str and type(r) != list:
+                r = str(r)
+            if type(r) == list:
+                r = max(r, key = len)
+            newcol.append(r)
+        newtab.append(newcol)
+
+    spacers = []
+
+    for i in range(len(newtab[0])):
+        spacers.append(max([len(col[i]) for col in newtab]))
+
+    return spacers
+        
+
+def tablizer(table, header, alignment=["left"]):
+    # set alignments
+
+    if len(alignment) == 1:
+        alignment = alignment*len(header)
+
+    if len(alignment) == 2 and len(alignment) != len(header):
+        alignment.extend([alignment[1]]*(len(header)-2))
+
+    # find longest lines of any multi-line headers
+    # and make all headers strings (maybe)
+    newheader = []
+    longesthead = 1
+    for i, head in enumerate(header):
+        if type(head) != str:
+            head = str(head)
+        head = head.split("\n")
+        if len(head) == 1:
+            head = head[0]
+        if type(head) == list:
+            if len(head) > longesthead:
+                longesthead = len(head)
+        newheader.append(head)
+
+    # spacing for everything
+    spacing = maxlength(table + [newheader])
+
+    # print header with alignment
+    for h in range(longesthead):
+        for i, head in enumerate(newheader):
+            if type(head) == list:
+                if len(head) > h:
+                    if alignment[i] == "left":
+                        print(f"{head[h]:<{spacing[i]}}", end="")
+                    elif alignment[i] == "right":
+                        print(f"{head[h]:>{spacing[i]}}", end="")
+                    else:
+                        print(f"{head[h]:^{spacing[i]}}", end="")
+                    if i != len(newheader)-1:
+                        print(" | ", end="")
+                    else:
+                        print()
+                else:
+                    print(f"{'':<{spacing[i]}}", end="")
+                    if i != len(newheader)-1:
+                        print(" | ", end="")
+                    else:
+                        print()
+            else:
+                if h == 0:
+                    if alignment[i] == "left":
+                        print(f"{head:<{spacing[i]}}", end="")
+                    elif alignment[i] == "right":
+                        print(f"{head:>{spacing[i]}}", end="")
+                    else:
+                        print(f"{head:^{spacing[i]}}", end="")
+                    if i != len(newheader)-1:
+                        print(" | ", end="")
+                    else:
+                        print()
+                else:
+                    print(f"{'':<{spacing[i]}}", end="")
+                    if i != len(newheader)-1:
+                        print(" | ", end="")
+                    else:
+                        print()
+
+    # print separator
+    for i, space in enumerate(spacing):
+        print(f"{'-'*space}", end="")
+        if i != len(spacing)-1:
+            print("-+-", end="")
+        else:
+            print()
+
+    # print each row of data with alignment
+    for row in table:
+        for i, col in enumerate(row):
+            if alignment[i] == "left":
+                print(f"{col:<{spacing[i]}}", end="")
+            elif alignment[i] == "right":
+                print(f"{col:>{spacing[i]}}", end="")
+            else:
+                print(f"{col:^{spacing[i]}}", end="")
+            if i != len(row)-1:
+                print(" | ", end="")
+        print()
+
 
 def processStats(dictionary, cosmetictype):
-    print(f"\n\n{cosmetictype.upper()}S STATS BY USERS")
-
     dictionary = dict(sorted(dictionary.items(), key=lambda item: item[1]["unlockedCount"]))
     values = []
     unlockedCount = []
@@ -32,51 +142,26 @@ def processStats(dictionary, cosmetictype):
         try: 
             aULVP.append(str(round(dictionary[value]['unlockedVP']/dictionary[value]['unlockedCount'])))
         except ZeroDivisionError:
-            aULVP.append("N/A")
+            aULVP.append("0")
         try: 
             aUVP.append(str(round(dictionary[value]['usedVP']/dictionary[value]['usedCount'])))
         except ZeroDivisionError:
-            aUVP.append("N/A")
+            aUVP.append("0")
 
-    values.append(cosmetictype.title() + " Name")
-    unlockedCount.append("Unlocked")
-    usedCount.append("Using")
-    percentUnlocked.append("% of All Users")
-    percentUsed.append("Users Using")
-    percentUsedOfUnlocked.append("% of Unlocked")
-    aULVP.append("Average VP per")
-    aUVP.append("Average VP per")
-
-    maxlength = lambda x: len(max(x, key=len))+1
-
-    valspace = maxlength(values)
-    unlockedcountspace = maxlength(unlockedCount)
-    usedcountspace = maxlength(usedCount)
-    percentusedspace = maxlength(percentUsed)
-    percentunlockedspace = maxlength(percentUnlocked)
-    percentusedofunlockedspace = maxlength(percentUsedOfUnlocked)
-    aulvpspace = maxlength(aULVP)
-    auvpspace = maxlength(aUVP)
-
-    header = f"{values[-1]:<{valspace}} {('Users'):>{unlockedcountspace}} {('Users'):>{usedcountspace}} {(percentUnlocked[-1]):>{percentunlockedspace}} {(percentUsed[-1]):>{percentusedspace}} {('% of All'):>{percentusedofunlockedspace}} {(aULVP[-1]):>{aulvpspace}} {(aUVP[-1]):>{auvpspace}}"
-    print(header)
-    print(f"{'':<{valspace}} {(unlockedCount[-1]):>{unlockedcountspace}} {(usedCount[-1]):>{usedcountspace}} {('Unlocked'):>{percentunlockedspace}} {('Users Using'):>{percentusedspace}} {(percentUsedOfUnlocked[-1]):>{percentusedofunlockedspace}} {('Unlocked User'):>{aulvpspace}} {('Using User'):>{auvpspace}}")
-    print("-"*len(header))
+    twod = []
     for i in range(len(values)-1):
-        print(f"{(values[i]):<{valspace}} {(unlockedCount[i]):>{unlockedcountspace}} {(usedCount[i]):>{usedcountspace}} {(percentUnlocked[i]):>{percentunlockedspace}} {(percentUsed[i]):>{percentusedspace}} {(percentUsedOfUnlocked[i]):>{percentusedofunlockedspace}} {(aULVP[i]):>{aulvpspace}} {(aUVP[i]):>{auvpspace}}")
+        thislist = []
+        thislist.append(values[i])
+        thislist.append(unlockedCount[i])
+        thislist.append(usedCount[i])
+        thislist.append(percentUnlocked[i])
+        thislist.append(percentUsed[i])
+        thislist.append(percentUsedOfUnlocked[i])
+        thislist.append(aULVP[i])
+        thislist.append(aUVP[i])
+        twod.append(thislist)
+    tablizer(twod, header=["Cosmetic\nName", "# of Users\nUnlocked", "# of Users\nUsing", "% of All Users\nUnlocked", "% of Users\nUsing", "% of Unlocked\nUsers Using", "Unlocked User\nAverage VP", "Using User\nAverage VP"], alignment=["left", "right"])
 
-    # if section == "unlocked":
-    #     print(f"{(values[-1]):<{valspace}} {('# of'):>{countspace}} {(percents[-1]):>{percentspace}} {(avp[-1]):>{avpspace}}")
-    #     print(" "*(1+len(f"{(values[-1]):<{valspace}}")) + f"{('Users'):>{countspace}} {('Users'):>{percentspace}} {('VP'):>{avpspace}}")
-    #     print("-"*len(f"{(values[-1]):<{valspace}} {(counts[-1]):>{countspace}} {(percents[-1]):>{percentspace}} {(avp[-1]):>{avpspace}}"))
-    #     for i in range(len(values)-1):
-    #         print(f"{(values[i]):<{valspace}} {(counts[i]):>{countspace}} {(percents[i]):>{percentspace}} {(avp[i]):>{avpspace}}")
-    # else:
-    #     print(f"{(values[-1]):<{valspace}} {('# of'):>{countspace}} {(percents[-1]):>{percentspace}} {(percentsUnlocked[-1]):>{percentsUnlockedSpace}} {(avp[-1]):>{avpspace}}")
-    #     print(" "*(1+len(f"{(values[-1]):<{valspace}}")) + f"{('Users'):>{countspace}} {('Users'):>{percentspace}} {('Users'):>{percentsUnlockedSpace}} {('VP'):>{avpspace}}")
-    #     print("-"*len(f"{(values[-1]):<{valspace}} {(counts[-1]):<{countspace}} {(percents[-1]):<{percentspace}} {(percentsUnlocked[-1]):<{percentsUnlockedSpace}} {(avp[-1]):<{avpspace}}"))
-    #     for i in range(len(values)-1):
-    #         print(f"{(values[i]):<{valspace}} {(counts[i]):>{countspace}} {(percents[i]):>{percentspace}} {(percentsUnlocked[i]):>{percentsUnlockedSpace}} {(avp[i]):>{avpspace}}")
 
 # open file and read the content in a list
 with open("username.txt",errors='ignore') as f:
@@ -91,10 +176,6 @@ with open("username.txt",errors='ignore') as f:
 
 with open("profiles.json", "r",errors='ignore') as f:
     profiles = json.load(f)
-
-cosmetics = []
-hat = ["gold-crown","silver-crown","bronze-crown","witch-hat","stars","santa-hat","blue-santa-hat","flames","blue-flames","halo","gold-wreath","spring-wreath","autumn-wreath","winter-wreath","summer-wreath","summer-olympics-wreath","summer-olympics-wreath-2","winter-olympics-wreath","sunglasses","flower-headband","autumn-leaves","fedora","coconut-holes","plastic-shine","pellets","pirate-hat","rose-wreath"]
-body = ["sticky-coat","toxic-coat","orbit-ring","clouds","storm-clouds","tuxedo","angel-wings","one-winged-angel","stick","royal-robes","mummy-wrap","doughnut"]
 
 hatcounts = {
     "gold-crown": {
@@ -334,45 +415,123 @@ bodycounts = {
         "usedVP":0
     }
 }
+achievementcounts = {
+    "scientist": 0,
+    "tree_tapper": 0,
+    "snowball_mayhem": 0,
+    "savior": 0,
+    "money_moves": 0,
+    "pellet_obfuscator": 0,
+    "champion": 0,
+    "core_revival": 0,
+    "peculiar_pathing": 0,
+    "ground_control": 0,
+    "lush_sands": 0,
+    "baneful_bunker": 0,
+    "wacky_ride": 0,
+    "radioactive_dasher": 0,
+    "serene_garden": 0,
+    "stomper": 0,
+    "enormous_tribute": 0,
+    "glacial_grouping": 0,
+    "magnetic_highway": 0,
+    "gardener": 0,
+    "survivalist": 0,
+    "mysterious_mangrove": 0,
+    "ominous_occult": 0,
+    "relentless_ridge": 0,
+    "intense_inferno": 0,
+    "district_demolition": 0,
+    "two_winged_angel": 0,
+    "humongous_visit": 0,
+    "quintessential_quarry": 0,
+    "endless_expansion": 0,
+    "visit_grandma": 0,
+    "traveller": 0,
+    "victor": 0,
+    "one_winged_angel": 0,
+    "frosty_fjord": 0,
+    "dipole_diversion": 0
+}
 
-
+hat = list(hatcounts.keys())
+body = list(bodycounts.keys())
+achievement = list(achievementcounts.keys())
 # loop through usernames
 start = time.perf_counter()
 
-for i, username in enumerate(profiles):
-    print(f"[{i+1}/{len(profiles)}] {list(username.keys())[0]}")
-    username = username[list(username.keys())[0]]
-    for h in hat:
-        if username["accessories"]["collection"][h]:
-            hatcounts[h]["unlockedCount"]+=1
-            hatcounts[h]["unlockedVP"]+=username["stats"]["highest_area_achieved_counter"]
-        if h == username["accessories"]["hat_selection"]:
-            hatcounts[h]["usedCount"]+=1
-            hatcounts[h]["usedVP"]+=username["stats"]["highest_area_achieved_counter"]
-    for b in body:
-        if username["accessories"]["collection"][b]:
-            bodycounts[b]["unlockedCount"]+=1
-            bodycounts[b]["unlockedVP"]+=username["stats"]["highest_area_achieved_counter"]
-        if b == username["accessories"]["body_selection"]:
-            bodycounts[b]["usedCount"]+=1
-            bodycounts[b]["usedVP"]+=username["stats"]["highest_area_achieved_counter"]
+userlist = []
 
+class user:
+  def __init__(self, name='', achievements=0):
+      self.name = ''
+      self.achievements = 0
+
+for i, userprofile in enumerate(profiles):
+    #print(f"[{i+1}/{len(profiles)}] {list(username.keys())[0]}")
+    userinfo = user()
+    username = list(userprofile.keys())[0]
+    userinfo.name = username
+    userdict = userprofile[username]
+    userinfo.achievements = len(userdict["stats"]["achievements"])
+    userlist.append(userinfo)
+    for h in hat:
+        if userdict["accessories"]["collection"][h]:
+            hatcounts[h]["unlockedCount"]+=1
+            hatcounts[h]["unlockedVP"]+=userdict["stats"]["highest_area_achieved_counter"]
+        if h == userdict["accessories"]["hat_selection"]:
+            hatcounts[h]["usedCount"]+=1
+            hatcounts[h]["usedVP"]+=userdict["stats"]["highest_area_achieved_counter"]
+    for b in body:
+        if userdict["accessories"]["collection"][b]:
+            # if b == "one-winged-angel":
+            #     print(f"{username} has one-winged-angel")
+            bodycounts[b]["unlockedCount"]+=1
+            bodycounts[b]["unlockedVP"]+=userdict["stats"]["highest_area_achieved_counter"]
+        if b == userdict["accessories"]["body_selection"]:
+            bodycounts[b]["usedCount"]+=1
+            bodycounts[b]["usedVP"]+=userdict["stats"]["highest_area_achieved_counter"]
+    for a in achievement:
+        if a in userdict["stats"]["achievements"]:
+            # if a == "one_winged_angel":
+            #     print(f"{username} has one_winged_angel")
+            achievementcounts[a]+=1
 
 print(f"Checked {len(profiles)} profiles in {time.perf_counter()-start:.2f} seconds.")
 print(f"Average time per profile: {(time.perf_counter()-start)/len(profiles):.2f} seconds.")
 
 start = time.perf_counter()
 
-# unlocked
-
+print(f"\nHat statistics from {len(profiles)} users:")
 processStats(hatcounts, "hat")
+
+print(f"\nBody cosmetic statistics from {len(profiles)} users:")
 processStats(bodycounts, "body cosmetic")
+
+print(f"\nAchievement statistics from {len(profiles)} users:")
+achievementcounts = dict(sorted(achievementcounts.items(), key=lambda item: item[1]))
+
+percents = []
+for a in achievementcounts:
+    percents.append(f"{achievementcounts[a]/len(profiles)*100:.2f}%")
+twoarray = [percents, list(achievementcounts.values()), list(achievementcounts.keys())]
+tablizer(list(zip(*twoarray[::-1])), header=["Achievement", "Count", "Percent"], alignment=["left", "right"])
+
+hatcounts["usersChecked"] = len(profiles)
+bodycounts["usersChecked"] = len(profiles)
+
+with open('hatdata.json', 'w', encoding='utf-8') as f:
+    json.dump(hatcounts, f, ensure_ascii=False, indent=4)
+with open('bodydata.json', 'w', encoding='utf-8') as f:
+    json.dump(bodycounts, f, ensure_ascii=False, indent=4)
+
+userlist.sort(key=operator.attrgetter('achievements'), reverse=True)
+
+with open('achievements.txt', 'w', encoding='utf-8') as f:
+    for u in userlist:
+        f.write(f"{u.name}: {u.achievements}\n")
+print("Saved to file.")
 
 print()
 print("Done")
 print(f"{time.perf_counter()-start:.2f} seconds, or {(time.perf_counter()-start)/len(usernames):.2f}s per username")
-
-# with open("counts.txt", "w") as f:
-#     for u in userlist:
-#         f.write(f"{u.name}: {u.achievements}\n")
-# print("Saved to file.")
