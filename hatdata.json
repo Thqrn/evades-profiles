@@ -1,69 +1,69 @@
 {
     "gold-crown": {
-        "unlockedCount": 676,
-        "usedCount": 397,
-        "unlockedVP": 1710518,
-        "usedVP": 532660
+        "unlockedCount": 679,
+        "usedCount": 400,
+        "unlockedVP": 1711737,
+        "usedVP": 557193
     },
     "silver-crown": {
-        "unlockedCount": 1249,
-        "usedCount": 560,
-        "unlockedVP": 2261091,
-        "usedVP": 496018
+        "unlockedCount": 1282,
+        "usedCount": 590,
+        "unlockedVP": 2264817,
+        "usedVP": 495724
     },
     "bronze-crown": {
-        "unlockedCount": 2621,
-        "usedCount": 994,
-        "unlockedVP": 3044324,
-        "usedVP": 465644
+        "unlockedCount": 2743,
+        "usedCount": 1091,
+        "unlockedVP": 3054990,
+        "usedVP": 474773
     },
     "witch-hat": {
-        "unlockedCount": 1117,
-        "usedCount": 203,
-        "unlockedVP": 1631174,
-        "usedVP": 105091
+        "unlockedCount": 1238,
+        "usedCount": 264,
+        "unlockedVP": 1642224,
+        "usedVP": 107773
     },
     "stars": {
-        "unlockedCount": 2884,
-        "usedCount": 457,
-        "unlockedVP": 2647781,
-        "usedVP": 147420
+        "unlockedCount": 3558,
+        "usedCount": 664,
+        "unlockedVP": 2696268,
+        "usedVP": 158010
     },
     "santa-hat": {
-        "unlockedCount": 6115,
-        "usedCount": 1412,
-        "unlockedVP": 3991181,
-        "usedVP": 320098
+        "unlockedCount": 9086,
+        "usedCount": 3144,
+        "unlockedVP": 4178488,
+        "usedVP": 427100
     },
     "blue-santa-hat": {
-        "unlockedCount": 1875,
-        "usedCount": 181,
-        "unlockedVP": 2153272,
-        "usedVP": 59111
+        "unlockedCount": 2199,
+        "usedCount": 298,
+        "unlockedVP": 2176459,
+        "usedVP": 64957
     },
     "flames": {
-        "unlockedCount": 2689,
-        "usedCount": 258,
-        "unlockedVP": 2424153,
-        "usedVP": 83846
+        "unlockedCount": 3447,
+        "usedCount": 455,
+        "unlockedVP": 2477810,
+        "usedVP": 95990
     },
     "blue-flames": {
-        "unlockedCount": 1024,
-        "usedCount": 143,
-        "unlockedVP": 1696004,
-        "usedVP": 64123
+        "unlockedCount": 1088,
+        "usedCount": 170,
+        "unlockedVP": 1702462,
+        "usedVP": 64466
     },
     "halo": {
-        "unlockedCount": 1372,
-        "usedCount": 482,
-        "unlockedVP": 2222006,
-        "usedVP": 415222
+        "unlockedCount": 1430,
+        "usedCount": 532,
+        "unlockedVP": 2228753,
+        "usedVP": 398938
     },
     "gold-wreath": {
-        "unlockedCount": 194,
+        "unlockedCount": 196,
         "usedCount": 106,
-        "unlockedVP": 664412,
-        "usedVP": 183013
+        "unlockedVP": 664812,
+        "usedVP": 179558
     },
     "spring-wreath": {
         "unlockedCount": 13,
@@ -78,9 +78,9 @@
         "usedVP": 9860
     },
     "winter-wreath": {
-        "unlockedCount": 12,
+        "unlockedCount": 13,
         "usedCount": 4,
-        "unlockedVP": 93548,
+        "unlockedVP": 93591,
         "usedVP": 16938
     },
     "summer-wreath": {
@@ -91,9 +91,9 @@
     },
     "summer-olympics-wreath": {
         "unlockedCount": 31,
-        "usedCount": 6,
-        "unlockedVP": 202833,
-        "usedVP": 19168
+        "usedCount": 7,
+        "unlockedVP": 202868,
+        "usedVP": 24244
     },
     "summer-olympics-wreath-2": {
         "unlockedCount": 2,
@@ -103,63 +103,63 @@
     },
     "winter-olympics-wreath": {
         "unlockedCount": 26,
-        "usedCount": 4,
-        "unlockedVP": 193159,
-        "usedVP": 18640
+        "usedCount": 5,
+        "unlockedVP": 193188,
+        "usedVP": 24086
     },
     "sunglasses": {
-        "unlockedCount": 289,
+        "unlockedCount": 293,
         "usedCount": 49,
-        "unlockedVP": 984638,
-        "usedVP": 69676
+        "unlockedVP": 985912,
+        "usedVP": 70024
     },
     "flower-headband": {
-        "unlockedCount": 160,
+        "unlockedCount": 161,
         "usedCount": 29,
-        "unlockedVP": 753991,
-        "usedVP": 63010
+        "unlockedVP": 754756,
+        "usedVP": 63122
     },
     "autumn-leaves": {
-        "unlockedCount": 424,
+        "unlockedCount": 428,
         "usedCount": 28,
-        "unlockedVP": 985116,
-        "usedVP": 28794
+        "unlockedVP": 986980,
+        "usedVP": 25527
     },
     "fedora": {
-        "unlockedCount": 692,
-        "usedCount": 92,
-        "unlockedVP": 1250355,
-        "usedVP": 50426
+        "unlockedCount": 767,
+        "usedCount": 116,
+        "unlockedVP": 1258795,
+        "usedVP": 52475
     },
     "coconut-holes": {
-        "unlockedCount": 75,
-        "usedCount": 0,
-        "unlockedVP": 462038,
-        "usedVP": 0
+        "unlockedCount": 76,
+        "usedCount": 3,
+        "unlockedVP": 462603,
+        "usedVP": 4276
     },
     "plastic-shine": {
-        "unlockedCount": 1071,
-        "usedCount": 104,
-        "unlockedVP": 1483139,
-        "usedVP": 103471
+        "unlockedCount": 1122,
+        "usedCount": 111,
+        "unlockedVP": 1489271,
+        "usedVP": 99541
     },
     "pellets": {
-        "unlockedCount": 420,
-        "usedCount": 60,
-        "unlockedVP": 937015,
-        "usedVP": 32734
+        "unlockedCount": 464,
+        "usedCount": 79,
+        "unlockedVP": 941811,
+        "usedVP": 32257
     },
     "pirate-hat": {
         "unlockedCount": 56,
         "usedCount": 4,
-        "unlockedVP": 466581,
-        "usedVP": 37357
+        "unlockedVP": 466886,
+        "usedVP": 37386
     },
     "rose-wreath": {
         "unlockedCount": 4,
         "usedCount": 4,
-        "unlockedVP": 38490,
-        "usedVP": 38490
+        "unlockedVP": 38492,
+        "usedVP": 38492
     },
-    "usersChecked": 6790
+    "usersChecked": 12254
 }

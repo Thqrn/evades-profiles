@@ -18,29 +18,23 @@ def processStats(dictionary, cosmetictype):
         values.append(value)
         unlockedCount.append(str(dictionary[value]["unlockedCount"]))
         usedCount.append(str(dictionary[value]["usedCount"]))
-        try:
-            percentUsed.append(f"{dictionary[value]['usedCount']/len(profiles)*100:.2f}%")
-        except ZeroDivisionError:
-            percentUsed.append("0")
-        try:
-            percentUnlocked.append(f"{dictionary[value]['unlockedCount']/len(profiles)*100:.2f}%")
-        except ZeroDivisionError:
-            percentUnlocked.append("0")
-        try:
+        percentUsed.append(f"{dictionary[value]['usedCount']/len(profiles)*100:.2f}%")
+        percentUnlocked.append(f"{dictionary[value]['unlockedCount']/len(profiles)*100:.2f}%")
+        if dictionary[value]['unlockedCount'] == 0:
+            percentUsedOfUnlocked.append("0.00%")
+        else:
             percentUsedOfUnlocked.append(f"{dictionary[value]['usedCount']/dictionary[value]['unlockedCount']*100:.2f}%")
-        except ZeroDivisionError:
-            percentUsedOfUnlocked.append("0")
-        try: 
-            aULVP.append(str(round(dictionary[value]['unlockedVP']/dictionary[value]['unlockedCount'])))
-        except ZeroDivisionError:
+        if dictionary[value]['unlockedCount'] == 0:
             aULVP.append("0")
-        try: 
-            aUVP.append(str(round(dictionary[value]['usedVP']/dictionary[value]['usedCount'])))
-        except ZeroDivisionError:
+        else:
+            aULVP.append(str(round(dictionary[value]['unlockedVP']/dictionary[value]['unlockedCount'])))
+        if dictionary[value]['usedCount'] == 0:
             aUVP.append("0")
+        else:
+            aUVP.append(str(round(dictionary[value]['usedVP']/dictionary[value]['usedCount'])))
 
     twod = []
-    for i in range(len(values)-1):
+    for i in range(len(values)):
         thislist = []
         thislist.append(values[i])
         thislist.append(unlockedCount[i])
@@ -368,6 +362,8 @@ for i, userprofile in enumerate(profiles):
     userlist.append(userinfo)
     for h in hat:
         if userdict["accessories"]["collection"][h]:
+            if h == "rose-wreath":
+                print(f"{username} has rose-wreath")
             hatcounts[h]["unlockedCount"]+=1
             hatcounts[h]["unlockedVP"]+=userdict["stats"]["highest_area_achieved_counter"]
         if h == userdict["accessories"]["hat_selection"]:
@@ -410,11 +406,14 @@ tablizer(list(zip(*twoarray[::-1])), header=["Achievement", "Count", "Percent"],
 
 hatcounts["usersChecked"] = len(profiles)
 bodycounts["usersChecked"] = len(profiles)
+achievementcounts["usersChecked"] = len(profiles)
 
 with open('hatdata.json', 'w', encoding='utf-8') as f:
     json.dump(hatcounts, f, ensure_ascii=False, indent=4)
 with open('bodydata.json', 'w', encoding='utf-8') as f:
     json.dump(bodycounts, f, ensure_ascii=False, indent=4)
+with open('achievementdata.json', 'w', encoding='utf-8') as f:
+    json.dump(achievementcounts, f, ensure_ascii=False, indent=4)
 
 userlist.sort(key=operator.attrgetter('achievements'), reverse=True)
 
