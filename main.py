@@ -55,13 +55,17 @@ def tablizer(table, header, alignment=["left"]):
     for h in range(longesthead):
         for i, head in enumerate(newheader):
             if type(head) == list:
-                if len(head) > h:
-                    if alignment[i] == "left":
-                        print(f"{head[h]:<{spacing[i]}}", end="")
-                    elif alignment[i] == "right":
-                        print(f"{head[h]:>{spacing[i]}}", end="")
+                if len(head) > longesthead-(h+1):
+                    if len(head) == longesthead:
+                        ran = h
                     else:
-                        print(f"{head[h]:^{spacing[i]}}", end="")
+                        ran = h+(len(head)-longesthead)
+                    if alignment[i] == "left":
+                        print(f"{head[ran]:<{spacing[i]}}", end="")
+                    elif alignment[i] == "right":
+                        print(f"{head[ran]:>{spacing[i]}}", end="")
+                    else:
+                        print(f"{head[ran]:^{spacing[i]}}", end="")
                     if i != len(newheader)-1:
                         print(" | ", end="")
                     else:
@@ -73,7 +77,7 @@ def tablizer(table, header, alignment=["left"]):
                     else:
                         print()
             else:
-                if h == 0:
+                if h == longesthead-1:
                     if alignment[i] == "left":
                         print(f"{head:<{spacing[i]}}", end="")
                     elif alignment[i] == "right":
@@ -160,7 +164,7 @@ def processStats(dictionary, cosmetictype):
         thislist.append(aULVP[i])
         thislist.append(aUVP[i])
         twod.append(thislist)
-    tablizer(twod, header=["Cosmetic\nName", "# of Users\nUnlocked", "# of Users\nUsing", "% of All Users\nUnlocked", "% of Users\nUsing", "% of Unlocked\nUsers Using", "Unlocked User\nAverage VP", "Using User\nAverage VP"], alignment=["left", "right"])
+    tablizer(twod, header=[cosmetictype.title()+" Name", "# of Users\nUnlocked", "# of Users\nUsing", "% of All Users\nUnlocked", "% of Users\nUsing", "% of Unlocked\nUsers Using", "Unlocked User\nAverage VP", "Using User\nAverage VP"], alignment=["left", "right"])
 
 
 # open file and read the content in a list

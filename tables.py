@@ -51,13 +51,17 @@ def tablizer(table, header, alignment=["left"]):
     for h in range(longesthead):
         for i, head in enumerate(newheader):
             if type(head) == list:
-                if len(head) > h:
-                    if alignment[i] == "left":
-                        print(f"{head[h]:<{spacing[i]}}", end="")
-                    elif alignment[i] == "right":
-                        print(f"{head[h]:>{spacing[i]}}", end="")
+                if len(head) > longesthead-(h+1):
+                    if len(head) == longesthead:
+                        ran = h
                     else:
-                        print(f"{head[h]:^{spacing[i]}}", end="")
+                        ran = h+(len(head)-longesthead)
+                    if alignment[i] == "left":
+                        print(f"{head[ran]:<{spacing[i]}}", end="")
+                    elif alignment[i] == "right":
+                        print(f"{head[ran]:>{spacing[i]}}", end="")
+                    else:
+                        print(f"{head[ran]:^{spacing[i]}}", end="")
                     if i != len(newheader)-1:
                         print(" | ", end="")
                     else:
@@ -69,7 +73,7 @@ def tablizer(table, header, alignment=["left"]):
                     else:
                         print()
             else:
-                if h == 0:
+                if h == longesthead-1:
                     if alignment[i] == "left":
                         print(f"{head:<{spacing[i]}}", end="")
                     elif alignment[i] == "right":
@@ -107,10 +111,3 @@ def tablizer(table, header, alignment=["left"]):
             if i != len(row)-1:
                 print(" | ", end="")
         print()
-
-headers = ["example\nheader", "line 2", "it fits to long\nstuff"]
-data = ["yahoo", "123", "like suuuuuuper long lines"]
-datamore = ["data4", 3, "5%"]
-dataints = [7, 8, 1239.123]
-
-tablizer([data, datamore, dataints], headers, ["left", "center"])
