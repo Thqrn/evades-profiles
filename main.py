@@ -53,11 +53,6 @@ with open("username.txt",errors='ignore') as f:
     usernames = f.readlines()
     usernames = [*set(usernames)]
 
-# class user:
-#     def __init__(self, name='', achievements=0):
-#         self.name = name
-#         self.achievements = achievements
-
 
 with open("profiles.json", "r",errors='ignore') as f:
     profiles = json.load(f)
@@ -342,15 +337,21 @@ achievementcounts = {
 hat = list(hatcounts.keys())
 body = list(bodycounts.keys())
 achievement = list(achievementcounts.keys())
+
+alertcosmetics = ["one-winged-angel", "summer-olympics-wreath-2", "rose-wreath", "doughnut"]
+
 # loop through usernames
 start = time.perf_counter()
 
 userlist = []
 
 class user:
-  def __init__(self, name='', achievements=0):
-      self.name = ''
-      self.achievements = 0
+    def __init__(self, name='', achievements=0, cosmetics=0, hats=0, bodies=0):
+        self.name = ''
+        self.achievements = 0
+        self.cosmetics = 0
+        self.hats = 0
+        self.bodies = 0
 
 for i, userprofile in enumerate(profiles):
     #print(f"[{i+1}/{len(profiles)}] {list(username.keys())[0]}")
@@ -359,11 +360,12 @@ for i, userprofile in enumerate(profiles):
     userinfo.name = username
     userdict = userprofile[username]
     userinfo.achievements = len(userdict["stats"]["achievements"])
-    userlist.append(userinfo)
     for h in hat:
         if userdict["accessories"]["collection"][h]:
-            if h == "rose-wreath":
-                print(f"{username} has rose-wreath")
+            if h in alertcosmetics:
+                print(f"{username} has {h}")
+            userinfo.cosmetics+=1
+            userinfo.hats+=1
             hatcounts[h]["unlockedCount"]+=1
             hatcounts[h]["unlockedVP"]+=userdict["stats"]["highest_area_achieved_counter"]
         if h == userdict["accessories"]["hat_selection"]:
@@ -371,8 +373,10 @@ for i, userprofile in enumerate(profiles):
             hatcounts[h]["usedVP"]+=userdict["stats"]["highest_area_achieved_counter"]
     for b in body:
         if userdict["accessories"]["collection"][b]:
-            # if b == "one-winged-angel":
-            #     print(f"{username} has one-winged-angel")
+            if b in alertcosmetics:
+                print(f"{username} has {b}")
+            userinfo.cosmetics+=1
+            userinfo.bodies+=1
             bodycounts[b]["unlockedCount"]+=1
             bodycounts[b]["unlockedVP"]+=userdict["stats"]["highest_area_achieved_counter"]
         if b == userdict["accessories"]["body_selection"]:
@@ -380,9 +384,8 @@ for i, userprofile in enumerate(profiles):
             bodycounts[b]["usedVP"]+=userdict["stats"]["highest_area_achieved_counter"]
     for a in achievement:
         if a in userdict["stats"]["achievements"]:
-            # if a == "one_winged_angel":
-            #     print(f"{username} has one_winged_angel")
             achievementcounts[a]+=1
+    userlist.append(userinfo)
 
 print(f"Checked {len(profiles)} profiles in {time.perf_counter()-start:.2f} seconds.")
 print(f"Average time per profile: {(time.perf_counter()-start)/len(profiles):.2f} seconds.")
@@ -416,11 +419,36 @@ with open('achievementdata.json', 'w', encoding='utf-8') as f:
     json.dump(achievementcounts, f, ensure_ascii=False, indent=4)
 
 userlist.sort(key=operator.attrgetter('achievements'), reverse=True)
-
-with open('achievements.txt', 'w', encoding='utf-8') as f:
+with open('achievementslb.txt', 'w', encoding='utf-8') as f:
+    f.write("Name: Achievement Count\n")
+    f.write("Total Achievements: 36\n")
     for u in userlist:
         f.write(f"{u.name}: {u.achievements}\n")
-print("Saved to file.")
+
+userlist.sort(key=operator.attrgetter('cosmetics'), reverse=True)
+with open('cosmeticslb.txt', 'w', encoding='utf-8') as f:
+    f.write("Name: Cosmetic Count\n")
+    f.write(f"Total Cosmetics: {len(hat)+len(body)}\n")
+    for u in userlist:
+        f.write(f"{u.name}: {u.cosmetics}\n")
+
+userlist.sort(key=operator.attrgetter('hats'), reverse=True)
+with open('hatslb.txt', 'w', encoding='utf-8') as f:
+    f.write("Name: Hat Count\n")
+    f.write(f"Total Hats: {len(hat)}\n")
+    for u in userlist:
+        f.write(f"{u.name}: {u.hats}\n")
+
+userlist.sort(key=operator.attrgetter('bodies'), reverse=True)
+with open('bodieslb.txt', 'w', encoding='utf-8') as f:
+    f.write("Name: Body Cosmetic Count\n")
+    f.write(f"Total Body Cosmetics: {len(body)}\n")
+    for u in userlist:
+        f.write(f"{u.name}: {u.bodies}\n")
+
+
+
+print("Saved to files.")
 
 print()
 print("Done")
