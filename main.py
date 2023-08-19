@@ -64,7 +64,8 @@ hatcounts = {
         "unlockedVP":0,
         "usedVP":0,
         "unlockedUsers": [],
-        "usedUsers": []
+        "usedUsers": [],
+        "unlocked": "being in the top 3 in the hall of fame at the end of the week"
     },
     "silver-crown": {
         "unlockedCount":0,
@@ -72,7 +73,8 @@ hatcounts = {
         "unlockedVP":0,
         "usedVP":0,
         "unlockedUsers": [],
-        "usedUsers": []
+        "usedUsers": [],
+        "unlocked": "being in the top 10 in the hall of fame at the end of the week"
     },
     "bronze-crown": {
         "unlockedCount":0,
@@ -80,7 +82,8 @@ hatcounts = {
         "unlockedVP":0,
         "usedVP":0,
         "unlockedUsers": [],
-        "usedUsers": []
+        "usedUsers": [],
+        "unlocked": "being in the top 30 in the hall of fame at the end of the week"
     },
     "witch-hat": {
         "unlockedCount":0,
@@ -88,7 +91,8 @@ hatcounts = {
         "unlockedVP":0,
         "usedVP":0,
         "unlockedUsers": [],
-        "usedUsers": []
+        "usedUsers": [],
+        "unlocked": "beating the hedge route of Mysterious Mansion"
     },
     "stars": {
         "unlockedCount":0,
@@ -96,7 +100,8 @@ hatcounts = {
         "unlockedVP":0,
         "usedVP":0,
         "unlockedUsers": [],
-        "usedUsers": []
+        "usedUsers": [],
+        "unlocked": "beating area 80 in Elite Expanse Hard"
     },
     "santa-hat": {
         "unlockedCount":0,
@@ -104,7 +109,8 @@ hatcounts = {
         "unlockedVP":0,
         "usedVP":0,
         "unlockedUsers": [],
-        "usedUsers": []
+        "usedUsers": [],
+        "unlocked": "beating Frozen Fjord"
     },
     "blue-santa-hat": {
         "unlockedCount":0,
@@ -112,7 +118,8 @@ hatcounts = {
         "unlockedVP":0,
         "usedVP":0,
         "unlockedUsers": [],
-        "usedUsers": []
+        "usedUsers": [],
+        "unlocked": "beating Frozen Fjord Hard"
     },
     "flames": {
         "unlockedCount":0,
@@ -120,7 +127,8 @@ hatcounts = {
         "unlockedVP":0,
         "usedVP":0,
         "unlockedUsers": [],
-        "usedUsers": []
+        "usedUsers": [],
+        "unlocked": "beating Burning Bunker"
     },
     "blue-flames": {
         "unlockedCount":0,
@@ -128,7 +136,8 @@ hatcounts = {
         "unlockedVP":0,
         "usedVP":0,
         "unlockedUsers": [],
-        "usedUsers": []
+        "usedUsers": [],
+        "unlocked": "beating Burning Bunker Hard"
     },
     "halo": {
         "unlockedCount":0,
@@ -136,7 +145,8 @@ hatcounts = {
         "unlockedVP":0,
         "usedVP":0,
         "unlockedUsers": [],
-        "usedUsers": []
+        "usedUsers": [],
+        "unlocked": "beating Monumental Migration 480"
     },
     "gold-wreath": {
         "unlockedCount":0,
@@ -144,7 +154,8 @@ hatcounts = {
         "unlockedVP":0,
         "usedVP":0,
         "unlockedUsers": [],
-        "usedUsers": []
+        "usedUsers": [],
+        "unlocked": "winning a tournament"
     },
     "spring-wreath": {
         "unlockedCount":0,
@@ -152,7 +163,8 @@ hatcounts = {
         "unlockedVP":0,
         "usedVP":0,
         "unlockedUsers": [],
-        "usedUsers": []
+        "usedUsers": [],
+        "unlocked": "winning the spring seasonal tournament"
     },
     "autumn-wreath": {
         "unlockedCount":0,
@@ -160,7 +172,8 @@ hatcounts = {
         "unlockedVP":0,
         "usedVP":0,
         "unlockedUsers": [],
-        "usedUsers": []
+        "usedUsers": [],
+        "unlocked": "winning the fall seasonal tournament"
     },
     "winter-wreath": {
         "unlockedCount":0,
@@ -168,7 +181,8 @@ hatcounts = {
         "unlockedVP":0,
         "usedVP":0,
         "unlockedUsers": [],
-        "usedUsers": []
+        "usedUsers": [],
+        "unlocked": "winning the winter seasonal tournament"
     },
     "summer-wreath": {
         "unlockedCount":0,
@@ -176,7 +190,8 @@ hatcounts = {
         "unlockedVP":0,
         "usedVP":0,
         "unlockedUsers": [],
-        "usedUsers": []
+        "usedUsers": [],
+        "unlocked": "winning the summer seasonal tournament"
     },
     "summer-olympics-wreath": {
         "unlockedCount":0,
@@ -184,7 +199,8 @@ hatcounts = {
         "unlockedVP":0,
         "usedVP":0,
         "unlockedUsers": [],
-        "usedUsers": []
+        "usedUsers": [],
+        "unlocked": "winning the summer olympics"
     },
     "summer-olympics-wreath-2": {
         "unlockedCount":0,
@@ -192,7 +208,8 @@ hatcounts = {
         "unlockedVP":0,
         "usedVP":0,
         "unlockedUsers": [],
-        "usedUsers": []
+        "usedUsers": [],
+        "unlocked": "previously winning the summer olympics (no longer obtainable)"
     },
     "winter-olympics-wreath": {
         "unlockedCount":0,
@@ -200,7 +217,8 @@ hatcounts = {
         "unlockedVP":0,
         "usedVP":0,
         "unlockedUsers": [],
-        "usedUsers": []
+        "usedUsers": [],
+        "unlocked": "winning the winter olympics"
     },
     "sunglasses": {
         "unlockedCount":0,
@@ -208,7 +226,8 @@ hatcounts = {
         "unlockedVP":0,
         "usedVP":0,
         "unlockedUsers": [],
-        "usedUsers": []
+        "usedUsers": [],
+        "unlocked": "obtaining 10 quest points"
     },
     "flower-headband": {
         "unlockedCount":0,
@@ -216,7 +235,8 @@ hatcounts = {
         "unlockedVP":0,
         "usedVP":0,
         "unlockedUsers": [],
-        "usedUsers": []
+        "usedUsers": [],
+        "unlocked": "obtaining 30 quest points"
     },
     "autumn-leaves": {
         "unlockedCount":0,
@@ -224,7 +244,8 @@ hatcounts = {
         "unlockedVP":0,
         "usedVP":0,
         "unlockedUsers": [],
-        "usedUsers": []
+        "usedUsers": [],
+        "unlocked": "beating Haunted Halls as Cybot while having a tree copied"
     },
     "fedora": {
         "unlockedCount":0,
@@ -232,7 +253,8 @@ hatcounts = {
         "unlockedVP":0,
         "usedVP":0,
         "unlockedUsers": [],
-        "usedUsers": []
+        "usedUsers": [],
+        "unlocked": "beating any region as Cent"
     },
     "coconut-holes": {
         "unlockedCount":0,
@@ -240,7 +262,8 @@ hatcounts = {
         "unlockedVP":0,
         "usedVP":0,
         "unlockedUsers": [],
-        "usedUsers": []
+        "usedUsers": [],
+        "unlocked": "beating Shifting Sands as Echelon in under 9 minutes"
     },
     "plastic-shine": {
         "unlockedCount":0,
@@ -248,7 +271,8 @@ hatcounts = {
         "unlockedVP":0,
         "usedVP":0,
         "unlockedUsers": [],
-        "usedUsers": []
+        "usedUsers": [],
+        "unlocked": "gaining access to Research Lab"
     },
     "pellets": {
         "unlockedCount":0,
@@ -256,7 +280,8 @@ hatcounts = {
         "unlockedVP":0,
         "usedVP":0,
         "unlockedUsers": [],
-        "usedUsers": []
+        "usedUsers": [],
+        "unlocked": "beating any region without collecting any pellets"
     },
     "pirate-hat": {
         "unlockedCount":0,
@@ -264,7 +289,8 @@ hatcounts = {
         "unlockedVP":0,
         "usedVP":0,
         "unlockedUsers": [],
-        "usedUsers": []
+        "usedUsers": [],
+        "unlocked": "obtaining 100 quest points"
     },
     "rose-wreath": {
         "unlockedCount":0,
@@ -272,7 +298,8 @@ hatcounts = {
         "unlockedVP":0,
         "usedVP":0,
         "unlockedUsers": [],
-        "usedUsers": []
+        "usedUsers": [],
+        "unlocked": "being a top 3 solo speedrunner or top 2 duo speedrunner"
     },
 }
 bodycounts = {
@@ -282,7 +309,8 @@ bodycounts = {
         "unlockedVP":0,
         "usedVP":0,
         "unlockedUsers": [],
-        "usedUsers": []
+        "usedUsers": [],
+        "unlocked": "beating Toxic Territoy 20"
     },
     "toxic-coat": {
         "unlockedCount":0,
@@ -290,7 +318,8 @@ bodycounts = {
         "unlockedVP":0,
         "usedVP":0,
         "unlockedUsers": [],
-        "usedUsers": []
+        "usedUsers": [],
+        "unlocked": "beating Toxic Territoy Hard 20"
     },
     "orbit-ring": {
         "unlockedCount":0,
@@ -298,7 +327,8 @@ bodycounts = {
         "unlockedVP":0,
         "usedVP":0,
         "unlockedUsers": [],
-        "usedUsers": []
+        "usedUsers": [],
+        "unlocked": "beating Elite Expanse 80"
     },
     "clouds": {
         "unlockedCount":0,
@@ -306,7 +336,8 @@ bodycounts = {
         "unlockedVP":0,
         "usedVP":0,
         "unlockedUsers": [],
-        "usedUsers": []
+        "usedUsers": [],
+        "unlocked": "beating Endless Echo 400"
     },
     "storm-clouds": {
         "unlockedCount":0,
@@ -314,7 +345,8 @@ bodycounts = {
         "unlockedVP":0,
         "usedVP":0,
         "unlockedUsers": [],
-        "usedUsers": []
+        "usedUsers": [],
+        "unlocked": "beating Endless Echo Hard 400"
     },
     "tuxedo": {
         "unlockedCount":0,
@@ -322,7 +354,8 @@ bodycounts = {
         "unlockedVP":0,
         "usedVP":0,
         "unlockedUsers": [],
-        "usedUsers": []
+        "usedUsers": [],
+        "unlocked": "obtaining 60 quest points"
     },
     "angel-wings": {
         "unlockedCount":0,
@@ -330,7 +363,8 @@ bodycounts = {
         "unlockedVP":0,
         "usedVP":0,
         "unlockedUsers": [],
-        "usedUsers": []
+        "usedUsers": [],
+        "unlocked": "beating Monumental Migration 480 as a duo"
     },
     "one-winged-angel": {
         "unlockedCount":0,
@@ -338,7 +372,8 @@ bodycounts = {
         "unlockedVP":0,
         "usedVP":0,
         "unlockedUsers": [],
-        "usedUsers": []
+        "usedUsers": [],
+        "unlocked": "beating Monumental Migration 480 solo"
     },
     "stick": {
         "unlockedCount":0,
@@ -346,7 +381,8 @@ bodycounts = {
         "unlockedVP":0,
         "usedVP":0,
         "unlockedUsers": [],
-        "usedUsers": []
+        "usedUsers": [],
+        "unlocked": "beating Vicious Valley with 20 or more upgrade points available"
     },
     "royal-robes": {
         "unlockedCount":0,
@@ -354,7 +390,8 @@ bodycounts = {
         "unlockedVP":0,
         "usedVP":0,
         "unlockedUsers": [],
-        "usedUsers": []
+        "usedUsers": [],
+        "unlocked": "downing 25 players with snowballs in Stellar Square"
     },
     "mummy-wrap": {
         "unlockedCount":0,
@@ -362,7 +399,8 @@ bodycounts = {
         "unlockedVP":0,
         "usedVP":0,
         "unlockedUsers": [],
-        "usedUsers": []
+        "usedUsers": [],
+        "unlocked": "beating Peculiar Pyramid Hard Perimeter and Inner"
     },
     "doughnut": {
         "unlockedCount":0,
@@ -370,153 +408,191 @@ bodycounts = {
         "unlockedVP":0,
         "usedVP":0,
         "unlockedUsers": [],
-        "usedUsers": []
+        "usedUsers": [],
+        "unlocked": "obtain 150 quest points"
     }
 }
 achievementcounts = {
     "scientist": {
         "count":0,
-        "users":[]
+        "users":[],
+        "unlocked": "finding Research Lab"
     },
     "tree_tapper": {
         "count":0,
-        "users":[]
+        "users":[],
+        "unlocked": "beating Haunted Halls as Cybot while having a tree copied"
     },
     "snowball_mayhem": {
         "count":0,
-        "users":[]
+        "users":[],
+        "unlocked": "downing 25 players with snowballs in Stellar Square"
     },
     "savior": {
         "count":0,
-        "users":[]
+        "users":[],
+        "unlocked": "unlocking all of the heroes"
     },
     "money_moves": {
         "count":0,
-        "users":[]
+        "users":[],
+        "unlocked": "beating any region as Cent"
     },
     "pellet_obfuscator": {
         "count":0,
-        "users":[]
+        "users":[],
+        "unlocked": "beating any region without collecting any pellets"
+
     },
     "champion": {
         "count":0,
-        "users":[]
+        "users":[],
+        "unlocked": "winning a tournament"
     },
     "core_revival": {
         "count":0,
-        "users":[]
+        "users":[],
+        "unlocked": "beating Central Core as Necro while solo"
     },
     "peculiar_pathing": {
         "count":0,
-        "users":[]
+        "users":[],
+        "unlocked": "beating Peculiar Pyramid Hard Perimeter and Inner"
     },
     "ground_control": {
         "count":0,
-        "users":[]
+        "users":[],
+        "unlocked": "beating Vicious Valley with 20 or more upgrade points available"
     },
     "lush_sands": {
         "count":0,
-        "users":[]
+        "users":[],
+        "unlocked": "beating Shifting Sands as Echelon in under 9 minutes"
     },
     "baneful_bunker": {
         "count":0,
-        "users":[]
+        "users":[],
+        "unlocked": "beating Burning Bunker as Magmax"
     },
     "wacky_ride": {
         "count":0,
-        "users":[]
+        "users":[],
+        "unlocked": "beating Wacky Wonderland 80 as Ghoul"
     },
     "radioactive_dasher": {
         "count":0,
-        "users":[]
+        "users":[],
+        "unlocked": "beating Toxic Territory in under 5 minutes"
     },
     "serene_garden": {
         "count":0,
-        "users":[]
+        "users":[],
+        "unlocked": "beating Grand Garden in under 6 minutes"
     },
     "stomper": {
         "count":0,
-        "users":[]
+        "users":[],
+        "unlocked": "stomping 1000 enemies as Brute"
     },
     "enormous_tribute": {
         "count":0,
-        "users":[]
+        "users":[],
+        "unlocked": "entering the large hidden area in the bottom right corner of Burning Bunker 26"
     },
     "glacial_grouping": {
         "count":0,
-        "users":[]
+        "users":[],
+        "unlocked": "beating Glacial Gorge as Magno"
     },
     "magnetic_highway": {
         "count":0,
-        "users":[]
+        "users":[],
+        "unlocked": "beating Magnetic Monopolo with 10 or less speed"
     },
     "gardener": {
         "count":0,
-        "users":[]
+        "users":[],
+        "unlocked": "activating all grass enemies Grand Garden 28"
     },
     "survivalist": {
         "count":0,
-        "users":[]
+        "users":[],
+        "unlocked": "reaching level 100 in Stellar Square"
     },
     "mysterious_mangrove": {
         "count":0,
-        "users":[]
+        "users":[],
+        "unlocked": "reaching 10 victory zones in Mysterious Mansion (does not have to be 10 different zones)"
     },
     "ominous_occult": {
         "count":0,
-        "users":[]
+        "users":[],
+        "unlocked": "beating Ominous Occult as Glob with 2 other people"
     },
     "relentless_ridge": {
         "count":0,
-        "users":[]
+        "users":[],
+        "unlocked": "beating Restless Ridge as Cybot while having a slippery enemy copied"
     },
     "intense_inferno": {
         "count":0,
-        "users":[]
+        "users":[],
+        "unlocked": "beating Infinite Inferno as Demona in a duo"
     },
     "district_demolition": {
         "count":0,
-        "users":[]
+        "users":[],
+        "unlocked": "beating Dangerous District Hard 80 as Stella"
     },
     "two_winged_angel": {
         "count":0,
-        "users":[]
+        "users":[],
+        "unlocked": "beating Monumental Migration 480 in a duo"
     },
     "humongous_visit": {
         "count":0,
-        "users":[]
+        "users":[],
+        "unlocked": "beating Humongous Hollow as Boldrock"
     },
     "quintessential_quarry": {
         "count":0,
-        "users":[]
+        "users":[],
+        "unlocked": "beating Quiet Quarry Hard as Mirage in under 8 minutes"
     },
     "endless_expansion": {
         "count":0,
-        "users":[]
+        "users":[],
+        "unlocked": "beating 1000 areas of Endless Echo (does not have to be in a single run)"
     },
     "visit_grandma": {
         "count":0,
-        "users":[]
+        "users":[],
+        "unlocked": "finding Grandma's House in Restless Ridge Hard 40"
     },
     "traveller": {
         "count":0,
-        "users":[]
+        "users":[],
+        "unlocked": "beating 10000 total areas"
     },
     "victor": {
         "count":0,
-        "users":[]
+        "users":[],
+        "unlocked": "reaching 250 victory zones"
     },
     "one_winged_angel": {
         "count":0,
-        "users":[]
+        "users":[],
+        "unlocked": "beating Monumental Migration 480 solo"
     },
     "frosty_fjord": {
         "count":0,
-        "users":[]
+        "users":[],
+        "unlocked": "beating Frozen Fjord Hard solo"
     },
     "dipole_diversion": {
         "count":0,
-        "users":[]
+        "users":[],
+        "unlocked": "beating Magnetic Monopolo Dipole and Magnetic Monopole Hard Dipole"
     }
 }
 
@@ -590,15 +666,14 @@ print(f"\nBody cosmetic statistics from {len(profiles)} users:")
 processStats(bodycounts, "body cosmetic")
 
 print(f"\nAchievement statistics from {len(profiles)} users:")
-achievementcounts = dict(sorted(achievementcounts.items(), key=lambda item: item[1]['count']))
+achievementcounts = dict(sorted(achievementcounts.items(), key=lambda item: item[1]['count'])) # sort by count
 percents = []
 countsachievements = []
 for a in achievementcounts:
-    percents.append(f"{achievementcounts[a]['count']/len(profiles)*100:.2f}%")
-    countsachievements.append(achievementcounts[a]['count'])
-print(countsachievements)
-twoarray = [percents, countsachievements, list(achievementcounts.keys())]
-tablizer(list(zip(*twoarray[::-1])), header=["Achievement", "Count", "Percent"], alignment=["left", "right"])
+    percents.append(f"{achievementcounts[a]['count']/len(profiles)*100:.2f}%") # make percents column
+    countsachievements.append(achievementcounts[a]['count']) # make counts column
+twoarray = [percents, countsachievements, list(achievementcounts.keys())] # make 2d array
+tablizer(list(zip(*twoarray[::-1])), header=["Achievement", "Count", "Percent"], alignment=["left", "right"]) # print table (zip is used to rotate the array)
 
 hatcounts["usersChecked"] = len(profiles)
 bodycounts["usersChecked"] = len(profiles)
@@ -643,30 +718,83 @@ print("Saved to files.")
 
 while True:
     # try:
-    print("Enter a cosmetic or achievement to view its speciric users or those who have it unlocked, or 'exit' to exit:")
+    print()
+    print("Enter 'cosmetic' 'achievement' or 'username' to view more detailed information, or 'exit' to exit:")
     print("NOTE: Values are not ordered in any specific order.")
     search = input("")
     if search == "exit":
         break
-    elif search in hat or search in body:
-        usedorunlocked = input("Enter 'used' or 'unlocked' to view the users who have used or unlocked the cosmetic:\n")
-        if usedorunlocked == "used":
-            if search in hat:
-                for i, u in enumerate(hatcounts[search]["usedUsers"]):
-                    print(f"{i+1}. {u}")
-            elif search in body:
-                for i, u in enumerate(bodycounts[search]["usedUsers"]):
-                    print(f"{i+1}. {u}")
-        elif usedorunlocked == "unlocked":
-            if search in hat:
-                for i, u in enumerate(hatcounts[search]["unlockedUsers"]):
-                    print(f"{i+1}. {u}")
-            elif search in body:
-                for i, u in enumerate(bodycounts[search]["unlockedUsers"]):
-                    print(f"{i+1}. {u}")
-    elif search in achievement:
-        for i, u in enumerate(achievementcounts[search]["users"]):
-            print(f"{i+1}. {u}")
+    elif search == "cosmetic":
+        search = input("Enter a cosmetic name to view more detailed information:\n")
+        if search in hat or search in body:
+            usedorunlocked = input("Enter 'used' or 'unlocked' to view the users who have used or unlocked the cosmetic:\n")
+            if usedorunlocked == "used":
+                if search in hat:
+                    print(f"Unlocked by {hatcounts[search]['unlocked']}.")
+                    print(f"Unlocked: {hatcounts[search]['unlockedCount']} users ({hatcounts[search]['unlockedCount']/len(profiles):.4%})")
+                    print(f"Using: {hatcounts[search]['usedCount']} users ({hatcounts[search]['usedCount']/len(profiles):.4%})")
+                    print(f"Out of all users with the cosmetic unlocked, {hatcounts[search]['usedCount']/hatcounts[search]['unlockedCount']:.4%} are using it.")
+                    for i, u in enumerate(hatcounts[search]["usedUsers"]):
+                        print(f"{i+1}. {u}")
+                elif search in body:
+                    print(f"Unlocked by {bodycounts[search]['unlocked']}.")
+                    print(f"Unlocked: {bodycounts[search]['unlockedCount']} users ({bodycounts[search]['unlockedCount']/len(profiles):.4%})")
+                    print(f"Using: {bodycounts[search]['usedCount']} users ({bodycounts[search]['usedCount']/len(profiles):.4%})")
+                    print(f"Out of all users with the cosmetic unlocked, {bodycounts[search]['usedCount']/bodycounts[search]['unlockedCount']:.4%} are using it.")
+                    for i, u in enumerate(bodycounts[search]["usedUsers"]):
+                        print(f"{i+1}. {u}")
+            elif usedorunlocked == "unlocked":
+                if search in hat:
+                    print(f"Unlocked by {hatcounts[search]['unlocked']}.")
+                    print(f"Unlocked: {hatcounts[search]['unlockedCount']} users ({hatcounts[search]['unlockedCount']/len(profiles):.4%})")
+                    print(f"Using: {hatcounts[search]['usedCount']} users ({hatcounts[search]['usedCount']/len(profiles):.4%})")
+                    print(f"Out of all users with the cosmetic unlocked, {hatcounts[search]['usedCount']/hatcounts[search]['unlockedCount']:.4%} are using it.")
+                    for i, u in enumerate(hatcounts[search]["unlockedUsers"]):
+                        print(f"{i+1}. {u}")
+                elif search in body:
+                    print(f"Unlocked by {bodycounts[search]['unlocked']}.")
+                    print(f"Unlocked: {bodycounts[search]['unlockedCount']} users ({bodycounts[search]['unlockedCount']/len(profiles):.4%})")
+                    print(f"Using: {bodycounts[search]['usedCount']} users ({bodycounts[search]['usedCount']/len(profiles):.4%})")
+                    print(f"Out of all users with the cosmetic unlocked, {bodycounts[search]['usedCount']/bodycounts[search]['unlockedCount']:.4%} are using it.")
+                    for i, u in enumerate(bodycounts[search]["unlockedUsers"]):
+                        print(f"{i+1}. {u}")
+            else:
+                print("Invalid input")
+        else:
+            print("Invalid input")
+    elif search == "achievement":
+        search = input("Enter an achievement name to view more detailed information:\n")
+        if search in achievement:
+            print(f"Unlocked by {achievementcounts[search]['unlocked']}.")
+            print(f"{achievementcounts[search]['count']} users ({achievementcounts[search]['count']/len(profiles):.4%}) have unlocked {search}:")
+            for i, u in enumerate(achievementcounts[search]["users"]):
+                print(f"{i+1}. {u}")
+    elif search == "username":
+        search = input("Enter a username to view more detailed information:\n")
+        print(f"Username: {search}")
+        hatused = "None"
+        hatsunlocked = []
+        for h in hat:
+            if search in hatcounts[h]["usedUsers"]:
+                hatused = h
+            if search in hatcounts[h]["unlockedUsers"]:
+                hatsunlocked.append(h)
+        bodyused = "None"
+        bodyunlocked = []
+        for b in body:
+            if search in bodycounts[b]["usedUsers"]:
+                bodyused = b
+            if search in bodycounts[b]["unlockedUsers"]:
+                bodyunlocked.append(b)
+        achievementunlocked = []
+        for a in achievement:
+            if search in achievementcounts[a]["users"]:
+                achievementunlocked.append(a)
+        print(f"Hat used: {hatused}")
+        print(f"{len(hatsunlocked)} hats unlocked: {','.join(hatsunlocked)}")
+        print(f"Body cosmetic used: {bodyused}")
+        print(f"{len(bodyunlocked)} body cosmetics unlocked: {','.join(bodyunlocked)}")
+        print(f"{len(achievementunlocked)} achievements unlocked: {','.join(achievementunlocked)}")
     else:
         print("Invalid input")
 

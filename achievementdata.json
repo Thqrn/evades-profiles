@@ -14,7 +14,8 @@
             "Bluemonkey14",
             "PixE",
             "Oriku"
-        ]
+        ],
+        "unlocked": "beating Monumental Migration 480 solo"
     },
     "frosty_fjord": {
         "count": 12,
@@ -31,7 +32,8 @@
             "Invi",
             "NevEx7",
             "Vikenti"
-        ]
+        ],
+        "unlocked": "beating Frozen Fjord Hard solo"
     },
     "intense_inferno": {
         "count": 27,
@@ -63,7 +65,8 @@
             "4chаn.org",
             "Phoenix748639",
             "xClubsteb"
-        ]
+        ],
+        "unlocked": "beating Infinite Inferno as Demona in a duo"
     },
     "ominous_occult": {
         "count": 36,
@@ -104,7 +107,8 @@
             "Bluemonkey14",
             "4chаn.org",
             "2"
-        ]
+        ],
+        "unlocked": "beating Ominous Occult as Glob with 2 other people"
     },
     "quintessential_quarry": {
         "count": 46,
@@ -155,7 +159,8 @@
             "MeguclOwUn",
             "2",
             "Phoenix748639"
-        ]
+        ],
+        "unlocked": "beating Quiet Quarry Hard as Mirage in under 8 minutes"
     },
     "dipole_diversion": {
         "count": 58,
@@ -218,7 +223,8 @@
             "Arzn",
             "Puella",
             "Phoenix748639"
-        ]
+        ],
+        "unlocked": "beating Magnetic Monopolo Dipole and Magnetic Monopole Hard Dipole"
     },
     "two_winged_angel": {
         "count": 66,
@@ -289,7 +295,8 @@
             "MeguclOwUn",
             "Phoenix748639",
             "Kaluub"
-        ]
+        ],
+        "unlocked": "beating Monumental Migration 480 in a duo"
     },
     "lush_sands": {
         "count": 76,
@@ -370,7 +377,8 @@
             "4chаn.org",
             "2",
             "Phoenix748639"
-        ]
+        ],
+        "unlocked": "beating Shifting Sands as Echelon in under 9 minutes"
     },
     "mysterious_mangrove": {
         "count": 78,
@@ -453,7 +461,8 @@
             "NNK",
             "xClubsteb",
             "sans747"
-        ]
+        ],
+        "unlocked": "reaching 10 victory zones in Mysterious Mansion (does not have to be 10 different zones)"
     },
     "visit_grandma": {
         "count": 82,
@@ -540,7 +549,8 @@
             "Phoenix748639",
             "AngelNarwall",
             "xClubsteb"
-        ]
+        ],
+        "unlocked": "finding Grandma's House in Restless Ridge Hard 40"
     },
     "relentless_ridge": {
         "count": 85,
@@ -630,7 +640,8 @@
             "Phoenix748639",
             "ZR1",
             "xClubsteb"
-        ]
+        ],
+        "unlocked": "beating Restless Ridge as Cybot while having a slippery enemy copied"
     },
     "district_demolition": {
         "count": 102,
@@ -737,7 +748,8 @@
             "RyanPD",
             "2",
             "Phoenix748639"
-        ]
+        ],
+        "unlocked": "beating Dangerous District Hard 80 as Stella"
     },
     "humongous_visit": {
         "count": 102,
@@ -844,7 +856,8 @@
             "Phoenix748639",
             "Soniс.exe",
             "el0x"
-        ]
+        ],
+        "unlocked": "beating Humongous Hollow as Boldrock"
     },
     "gardener": {
         "count": 112,
@@ -961,7 +974,8 @@
             "Phoenix748639",
             "Kaluub",
             "xClubsteb"
-        ]
+        ],
+        "unlocked": "activating all grass enemies Grand Garden 28"
     },
     "radioactive_dasher": {
         "count": 119,
@@ -1085,7 +1099,8 @@
             "Kiss0My0Axe",
             "xClubsteb",
             "el0x"
-        ]
+        ],
+        "unlocked": "beating Toxic Territory in under 5 minutes"
     },
     "victor": {
         "count": 126,
@@ -1216,7 +1231,8 @@
             "2",
             "Phoenix748639",
             "xClubsteb"
-        ]
+        ],
+        "unlocked": "reaching 250 victory zones"
     },
     "wacky_ride": {
         "count": 143,
@@ -1364,7 +1380,8 @@
             "2",
             "Cresania",
             "Phoenix748639"
-        ]
+        ],
+        "unlocked": "beating Wacky Wonderland 80 as Ghoul"
     },
     "champion": {
         "count": 150,
@@ -1519,7 +1536,8 @@
             "Jayyyyyyyyyyyyyy",
             "παραλία",
             "Kaluub"
-        ]
+        ],
+        "unlocked": "winning a tournament"
     },
     "glacial_grouping": {
         "count": 162,
@@ -1686,7 +1704,8 @@
             "Phoenix748639",
             "Soniс.exe",
             "xClubsteb"
-        ]
+        ],
+        "unlocked": "beating Glacial Gorge as Magno"
     },
     "baneful_bunker": {
         "count": 170,
@@ -1861,7 +1880,8 @@
             "anero",
             "ZR1",
             "DayFanton"
-        ]
+        ],
+        "unlocked": "beating Burning Bunker as Magmax"
     },
     "core_revival": {
         "count": 185,
@@ -2051,7 +2071,8 @@
             "ᎩᎧᏝᎧ",
             "xClubsteb",
             "sans747"
-        ]
+        ],
+        "unlocked": "beating Central Core as Necro while solo"
     },
     "serene_garden": {
         "count": 206,
@@ -2262,7 +2283,8 @@
             "xClubsteb",
             "el0x",
             "sans747"
-        ]
+        ],
+        "unlocked": "beating Grand Garden in under 6 minutes"
     },
     "survivalist": {
         "count": 231,
@@ -2498,7 +2520,8 @@
             "xClubsteb",
             "el0x",
             "sans747"
-        ]
+        ],
+        "unlocked": "reaching level 100 in Stellar Square"
     },
     "traveller": {
         "count": 254,
@@ -2757,7 +2780,8 @@
             "DayFanton",
             "xClubsteb",
             "atomick"
-        ]
+        ],
+        "unlocked": "beating 10000 total areas"
     },
     "magnetic_highway": {
         "count": 272,
@@ -3034,7 +3058,8 @@
             "XFELLSANS",
             "Kaluub",
             "atomick"
-        ]
+        ],
+        "unlocked": "beating Magnetic Monopolo with 10 or less speed"
     },
     "endless_expansion": {
         "count": 390,
@@ -3429,7 +3454,8 @@
             "saharok22656245",
             "xClubsteb",
             "atomick"
-        ]
+        ],
+        "unlocked": "beating 1000 areas of Endless Echo (does not have to be in a single run)"
     },
     "tree_tapper": {
         "count": 428,
@@ -3862,7 +3888,8 @@
             "Kaluub",
             "xClubsteb",
             "el0x"
-        ]
+        ],
+        "unlocked": "beating Haunted Halls as Cybot while having a tree copied"
     },
     "peculiar_pathing": {
         "count": 451,
@@ -4318,7 +4345,8 @@
             "Kaluub",
             "xClubsteb",
             "el0x"
-        ]
+        ],
+        "unlocked": "beating Peculiar Pyramid Hard Perimeter and Inner"
     },
     "pellet_obfuscator": {
         "count": 463,
@@ -4786,7 +4814,8 @@
             "getgudman",
             "xClubsteb",
             "PlazmaPlayz"
-        ]
+        ],
+        "unlocked": "beating any region without collecting any pellets"
     },
     "enormous_tribute": {
         "count": 505,
@@ -5296,7 +5325,8 @@
             "el0x",
             "PlazmaPlayz",
             "sans747"
-        ]
+        ],
+        "unlocked": "entering the large hidden area in the bottom right corner of Burning Bunker 26"
     },
     "snowball_mayhem": {
         "count": 555,
@@ -5856,7 +5886,8 @@
             "atomick",
             "el0x",
             "PlazmaPlayz"
-        ]
+        ],
+        "unlocked": "downing 25 players with snowballs in Stellar Square"
     },
     "money_moves": {
         "count": 767,
@@ -6628,7 +6659,8 @@
             "xClubsteb",
             "atomick",
             "PlazmaPlayz"
-        ]
+        ],
+        "unlocked": "beating any region as Cent"
     },
     "ground_control": {
         "count": 932,
@@ -7565,7 +7597,8 @@
             "xClubsteb",
             "atomick",
             "PlazmaPlayz"
-        ]
+        ],
+        "unlocked": "beating Vicious Valley with 20 or more upgrade points available"
     },
     "scientist": {
         "count": 1122,
@@ -8692,7 +8725,8 @@
             "xClubsteb",
             "atomick",
             "el0x"
-        ]
+        ],
+        "unlocked": "finding Research Lab"
     },
     "savior": {
         "count": 1168,
@@ -9865,7 +9899,8 @@
             "xClubsteb",
             "atomick",
             "el0x"
-        ]
+        ],
+        "unlocked": "unlocking all of the heroes"
     },
     "stomper": {
         "count": 1231,
@@ -11101,7 +11136,8 @@
             "atomick",
             "el0x",
             "PlazmaPlayz"
-        ]
+        ],
+        "unlocked": "stomping 1000 enemies as Brute"
     },
     "usersChecked": 12254
 }
