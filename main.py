@@ -787,14 +787,18 @@ while True:
             if search in bodycounts[b]["unlockedUsers"]:
                 bodyunlocked.append(b)
         achievementunlocked = []
+        achievementlocked = []
         for a in achievement:
             if search in achievementcounts[a]["users"]:
                 achievementunlocked.append(a)
+            else:
+                achievementlocked.append(a)
         print(f"Hat used: {hatused}")
         print(f"{len(hatsunlocked)} hats unlocked: {','.join(hatsunlocked)}")
         print(f"Body cosmetic used: {bodyused}")
         print(f"{len(bodyunlocked)} body cosmetics unlocked: {','.join(bodyunlocked)}")
         print(f"{len(achievementunlocked)} achievements unlocked: {','.join(achievementunlocked)}")
+        print(f"{len(achievementlocked)} achievements missing: {','.join(achievementlocked)}")
     else:
         print("Invalid input")
 
