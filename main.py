@@ -794,11 +794,11 @@ while True:
             else:
                 achievementlocked.append(a)
         print(f"Hat used: {hatused}")
-        print(f"{len(hatsunlocked)} hats unlocked: {','.join(hatsunlocked)}")
         print(f"Body cosmetic used: {bodyused}")
-        print(f"{len(bodyunlocked)} body cosmetics unlocked: {','.join(bodyunlocked)}")
-        print(f"{len(achievementunlocked)} achievements unlocked: {','.join(achievementunlocked)}")
-        print(f"{len(achievementlocked)} achievements missing: {','.join(achievementlocked)}")
+        print(f"{len(hatsunlocked)} hats unlocked: {', '.join(hatsunlocked)}")
+        print(f"{len(bodyunlocked)} body cosmetics unlocked: {', '.join(bodyunlocked)}")
+        print(f"{len(achievementunlocked)} achievements unlocked: {', '.join(achievementunlocked)}")
+        print(f"{len(achievementlocked)} achievements missing: {', '.join(achievementlocked)}")
     else:
         print("Invalid input")
 
