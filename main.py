@@ -600,7 +600,7 @@ hat = list(hatcounts.keys())
 body = list(bodycounts.keys())
 achievement = list(achievementcounts.keys())
 
-alertcosmetics = ["one-winged-angel", "summer-olympics-wreath-2", "rose-wreath", "doughnut"]
+alertcosmetics = ["one-winged-angel"]
 
 # loop through usernames
 start = time.perf_counter()
